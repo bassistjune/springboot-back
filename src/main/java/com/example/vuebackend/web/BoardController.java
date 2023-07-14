@@ -29,12 +29,13 @@ public class BoardController {
     }
 
     @PostMapping("/board")
-    public BoardEntity create(@ModelAttribute BoardDto boardDto, @RequestParam MultipartFile file) throws Exception {
+    public BoardEntity create(@ModelAttribute BoardDto boardDto, @RequestParam(required = false) MultipartFile file) throws Exception {
         return boardService.create(boardDto, file);
     }
 
+
     @PatchMapping("/board/{id}")
-    public BoardEntity update(@PathVariable Long id, @ModelAttribute BoardDto boardDto, @RequestParam MultipartFile file) throws Exception {
+    public BoardEntity update(@PathVariable Long id, @ModelAttribute BoardDto boardDto, @RequestParam(required = false) MultipartFile file) throws Exception {
         boardDto.setIdx(id);
         return boardService.update(boardDto, file);
     }

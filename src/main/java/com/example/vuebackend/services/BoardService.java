@@ -82,6 +82,8 @@ public class BoardService {
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
             boardDto.setFileUrl(fileName);
+        } else {
+            boardDto.setFileUrl(null); // 파일이 없는 경우에는 파일 URL을 null로 설정
         }
 
         BoardEntity entity = BoardEntity.builder()
@@ -111,6 +113,9 @@ public class BoardService {
             Files.createDirectories(filePath.getParent());
             boardDto.setFileName(file.getOriginalFilename());
             boardDto.setFileUrl(fileName);
+        }  else {
+            boardDto.setFileName(null); // 파일이 없는 경우에는 파일 이름과 URL을 null로 설정
+            boardDto.setFileUrl(null);
         }
 
         BoardEntity entity = boardRepository.findById(boardDto.getIdx())
