@@ -19,6 +19,7 @@ spring:
       max-age: 3600
   jackson:
     property-naming-strategy: SNAKE_CASE
+    time-zone: Asia/Seoul
 
 spring.jpa.open-in-view: false
 spring.jpa.hibernate.ddl-auto: update
