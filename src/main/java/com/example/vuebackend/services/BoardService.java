@@ -11,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -75,7 +76,7 @@ public class BoardService {
         if (file != null && !file.isEmpty()) {
             String uploadDir = "./upload";
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
-            Path filePath = Path.of(uploadDir, fileName);
+            Path filePath = Paths.get(uploadDir, fileName);
 
 
             Files.createDirectories(filePath.getParent());
@@ -104,7 +105,7 @@ public class BoardService {
         if (file != null && !file.isEmpty()) {
             String uploadDir = "./upload";
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
-            Path filePath = Path.of(uploadDir, fileName);
+            Path filePath = Paths.get(uploadDir, fileName);
 
             // Create upload directory if it doesn't exist
 

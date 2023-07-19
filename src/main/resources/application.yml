@@ -1,13 +1,27 @@
-
 server:
   port: 8081
 
 spring:
+  web:
+    resources:
+        static-locations: classpath:/upload/, classpath:/static/, classpath:/public/
+  security:
+    user:
+      name: admin
+      password: password
+    headers:
+      content-security-policy: "default-src 'self'; img-src 'self' data:"
+    cors:
+      allowed-origins: "*"
+      allowed-methods: "*"
+      allowed-headers: "*"
+      allow-credentials: true
+      max-age: 3600
   jackson:
     property-naming-strategy: SNAKE_CASE
 
 spring.jpa.open-in-view: false
-spring.jpa.hibernate.ddl-auto: create-drop
+spring.jpa.hibernate.ddl-auto: update
 spring.jpa.show-sql: true
 spring.jpa.generate-ddl: true
 spring.jpa.defer-datasource-initialization: true
