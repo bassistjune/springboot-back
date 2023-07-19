@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class VueBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VueBackendApplication.class, args);
+		SpringApplication.run(VueBackendApplication.class, "--server.port=8080");
 	}
 
 }
