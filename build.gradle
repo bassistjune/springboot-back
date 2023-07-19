@@ -6,6 +6,12 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
+jar {
+	enabled = false
+	manifest {
+		attributes 'Main-Class': 'com.example.vuebackend.VueBackendApplication'
+	}
+}
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
@@ -26,7 +32,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 springBoot {
-	mainClass = 'com.example.vuebackend.VueBackendApplication' // 실제 메인 클래스 패키지와 이름으로 변경해야 합니다.
+	mainClass = 'com.example.vuebackend' // 실제 메인 클래스 패키지와 이름으로 변경해야 합니다.
 }
 application {
 	mainClassName = 'com.example.vuebackend.VueBackendApplication'
