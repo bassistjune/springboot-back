@@ -4,7 +4,7 @@ server:
 spring:
   web:
     resources:
-        static-locations: classpath:/upload/, classpath:/static/, classpath:/public/
+        static-locations: classpath:/upload/
   security:
     user:
       name: admin
@@ -22,7 +22,10 @@ spring:
     time-zone: Asia/Seoul
 
 spring.jpa.open-in-view: false
+#배포시 수정!!!
+#spring.jpa.hibernate.ddl-auto: create-drop
 spring.jpa.hibernate.ddl-auto: update
+#배포시 수정!!!
 spring.jpa.show-sql: true
 spring.jpa.generate-ddl: true
 spring.jpa.defer-datasource-initialization: true
@@ -34,6 +37,8 @@ spring.h2.console.enabled: true
 spring.h2.console.path: /h2-console
 spring.h2.console.settings.web-allow-others: true
 
+file:
+  upload-dir: static/upload/
 spring.servlet.multipart.enabled: true
 spring.servlet.multipart.max-file-size: 10MB
 spring.servlet.multipart.max-request-size: 10MB
