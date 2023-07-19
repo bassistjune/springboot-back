@@ -25,6 +25,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+springBoot {
+	mainClass = 'com.example.vuebackend.VueBackendApplication' // 실제 메인 클래스 패키지와 이름으로 변경해야 합니다.
+}
 application {
 	mainClassName = 'com.example.vuebackend.VueBackendApplication'
 }
