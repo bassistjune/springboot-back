@@ -5,18 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity
-@Table(name = "board")
 public class BoardEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
     private String type;
     private String email;
@@ -25,16 +20,15 @@ public class BoardEntity {
     private String contents;
     private String author;
     private String fileName;
-    @Column(name = "file_url")
     private String fileUrl;
     private LocalDateTime createdAt;
-    @OneToOne(mappedBy = "board", cascade = CascadeType.ALL)
     private FileEntity file;
-    public FileEntity getFile() {
-        return file;
+
+    public String getFileUrl() {
+        return fileUrl;
     }
 
-    public void setFile(FileEntity file) {
-        this.file = file;
+    public void setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
     }
 }
