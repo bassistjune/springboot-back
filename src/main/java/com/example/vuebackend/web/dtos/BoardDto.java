@@ -21,5 +21,8 @@ public class BoardDto implements Serializable {
     private String author;
     private String createdAt;
     private String fileName;
-    private String fileUrl;  // 이미지 파일 경로 또는 파일명을 저장할 변수
+    private String fileUrl;
+    public Long getId() {
+        return idx;
+    }
 }

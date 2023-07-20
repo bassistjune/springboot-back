@@ -17,7 +17,6 @@ public class BoardController {
         this.boardService = boardService;
     }
 
-
     @GetMapping("/list")
     public List<BoardDto> getBoardList() {
         return boardService.getBoardList();
@@ -29,12 +28,12 @@ public class BoardController {
     }
 
     @PostMapping("")
-    public BoardEntity create(@ModelAttribute BoardDto boardDto, @RequestParam(required = false) MultipartFile file) throws Exception {
+    public BoardEntity create(@RequestBody BoardDto boardDto, @RequestParam(required = false) MultipartFile file) throws Exception {
         return boardService.create(boardDto, file);
     }
 
     @PatchMapping("/{id}")
-    public BoardEntity update(@PathVariable Long id, @ModelAttribute BoardDto boardDto, @RequestParam(required = false) MultipartFile file) throws Exception {
+    public BoardEntity update(@PathVariable Long id, @RequestBody BoardDto boardDto, @RequestParam(required = false) MultipartFile file) throws Exception {
         boardDto.setIdx(id);
         return boardService.update(boardDto, file);
     }
