@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.vuebackend.VueBackendApplicationTests" time="0.883" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="jdk.extensions.version" value="17.0.8.0-ea"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/hanjunhui/Downloads/demo/target/test-classes:/Users/hanjunhui/Downloads/demo/target/classes:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-starter/2.7.13/spring-boot-starter-2.7.13.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot/2.7.13/spring-boot-2.7.13.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-context/5.3.28/spring-context-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-aop/5.3.28/spring-aop-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-beans/5.3.28/spring-beans-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-expression/5.3.28/spring-expression-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.7.13/spring-boot-autoconfigure-2.7.13.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.7.13/spring-boot-starter-logging-2.7.13.jar:/Users/hanjunhui/.m2/repository/ch/qos/logback/logback-classic/1.2.12/logback-classic-1.2.12.jar:/Users/hanjunhui/.m2/repository/ch/qos/logback/logback-core/1.2.12/logback-core-1.2.12.jar:/Users/hanjunhui/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.17.2/log4j-to-slf4j-2.17.2.jar:/Users/hanjunhui/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar:/Users/hanjunhui/.m2/repository/org/slf4j/jul-to-slf4j/1.7.36/jul-to-slf4j-1.7.36.jar:/Users/hanjunhui/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-core/5.3.28/spring-core-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-jcl/5.3.28/spring-jcl-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/yaml/snakeyaml/1.30/snakeyaml-1.30.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.7.13/spring-boot-starter-test-2.7.13.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-test/2.7.13/spring-boot-test-2.7.13.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.7.13/spring-boot-test-autoconfigure-2.7.13.jar:/Users/hanjunhui/.m2/repository/com/jayway/jsonpath/json-path/2.7.0/json-path-2.7.0.jar:/Users/hanjunhui/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/hanjunhui/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/hanjunhui/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/hanjunhui/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/hanjunhui/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/hanjunhui/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/hanjunhui/.m2/repository/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.jar:/Users/hanjunhui/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/hanjunhui/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/Users/hanjunhui/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/hanjunhui/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/hanjunhui/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/hanjunhui/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hanjunhui/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/Users/hanjunhui/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/hanjunhui/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/hanjunhui/.m2/repository/org/mockito/mockito-core/4.5.1/mockito-core-4.5.1.jar:/Users/hanjunhui/.m2/repository/net/bytebuddy/byte-buddy/1.12.23/byte-buddy-1.12.23.jar:/Users/hanjunhui/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.23/byte-buddy-agent-1.12.23.jar:/Users/hanjunhui/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:/Users/hanjunhui/.m2/repository/org/mockito/mockito-junit-jupiter/4.5.1/mockito-junit-jupiter-4.5.1.jar:/Users/hanjunhui/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/hanjunhui/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-test/5.3.28/spring-test-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse OpenJ9"/>
+    <property name="com.ibm.vm.bitmode" value="64"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="com.ibm.oti.vm.library.version" value="29"/>
+    <property name="java.vendor.url" value="https://www.ibm.com/semeru-runtimes"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Users/hanjunhui/Library/Java/JavaVirtualMachines/semeru-17.0.8/Contents/Home/lib/default:/Users/hanjunhui/Library/Java/JavaVirtualMachines/semeru-17.0.8/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/hanjunhui/Downloads/demo/target/surefire/surefirebooter4575780263163759700.jar /Users/hanjunhui/Downloads/demo/target/surefire 2023-07-20T12-39-29_208-jvmRun1 surefire16940488978733964146tmp surefire_09746751714742608873tmp"/>
+    <property name="surefire.test.class.path" value="/Users/hanjunhui/Downloads/demo/target/test-classes:/Users/hanjunhui/Downloads/demo/target/classes:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-starter/2.7.13/spring-boot-starter-2.7.13.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot/2.7.13/spring-boot-2.7.13.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-context/5.3.28/spring-context-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-aop/5.3.28/spring-aop-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-beans/5.3.28/spring-beans-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-expression/5.3.28/spring-expression-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.7.13/spring-boot-autoconfigure-2.7.13.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.7.13/spring-boot-starter-logging-2.7.13.jar:/Users/hanjunhui/.m2/repository/ch/qos/logback/logback-classic/1.2.12/logback-classic-1.2.12.jar:/Users/hanjunhui/.m2/repository/ch/qos/logback/logback-core/1.2.12/logback-core-1.2.12.jar:/Users/hanjunhui/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.17.2/log4j-to-slf4j-2.17.2.jar:/Users/hanjunhui/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar:/Users/hanjunhui/.m2/repository/org/slf4j/jul-to-slf4j/1.7.36/jul-to-slf4j-1.7.36.jar:/Users/hanjunhui/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-core/5.3.28/spring-core-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-jcl/5.3.28/spring-jcl-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/yaml/snakeyaml/1.30/snakeyaml-1.30.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.7.13/spring-boot-starter-test-2.7.13.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-test/2.7.13/spring-boot-test-2.7.13.jar:/Users/hanjunhui/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.7.13/spring-boot-test-autoconfigure-2.7.13.jar:/Users/hanjunhui/.m2/repository/com/jayway/jsonpath/json-path/2.7.0/json-path-2.7.0.jar:/Users/hanjunhui/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/hanjunhui/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/hanjunhui/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/hanjunhui/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/hanjunhui/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/hanjunhui/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/hanjunhui/.m2/repository/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.jar:/Users/hanjunhui/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/hanjunhui/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/Users/hanjunhui/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/hanjunhui/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/hanjunhui/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/hanjunhui/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hanjunhui/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/Users/hanjunhui/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/hanjunhui/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/hanjunhui/.m2/repository/org/mockito/mockito-core/4.5.1/mockito-core-4.5.1.jar:/Users/hanjunhui/.m2/repository/net/bytebuddy/byte-buddy/1.12.23/byte-buddy-1.12.23.jar:/Users/hanjunhui/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.23/byte-buddy-agent-1.12.23.jar:/Users/hanjunhui/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:/Users/hanjunhui/.m2/repository/org/mockito/mockito-junit-jupiter/4.5.1/mockito-junit-jupiter-4.5.1.jar:/Users/hanjunhui/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/hanjunhui/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/hanjunhui/.m2/repository/org/springframework/spring-test/5.3.28/spring-test-5.3.28.jar:/Users/hanjunhui/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/hanjunhui"/>
+    <property name="user.language" value="ko"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="/Users/hanjunhui/Library/Java/JavaVirtualMachines/semeru-17.0.8/Contents/Home"/>
+    <property name="ibm.signalhandling.rs" value="false"/>
+    <property name="openjdk.methodhandles" value="true"/>
+    <property name="jdk.extensions.name" value="Extensions for OpenJDK for Eclipse OpenJ9"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/hanjunhui/Downloads/demo"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.compiler" value="j9jit29"/>
+    <property name="com.ibm.util.extralibs.properties" value=""/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="com.ibm.oti.configuration" value="scar"/>
+    <property name="surefire.real.class.path" value="/Users/hanjunhui/Downloads/demo/target/surefire/surefirebooter4575780263163759700.jar"/>
+    <property name="com.ibm.oti.shared.enabled" value="false"/>
+    <property name="com.ibm.oti.vm.bootstrap.library.path" value="/Users/hanjunhui/Library/Java/JavaVirtualMachines/semeru-17.0.8/Contents/Home/lib/default:/Users/hanjunhui/Library/Java/JavaVirtualMachines/semeru-17.0.8/Contents/Home/lib"/>
+    <property name="com.ibm.cpu.endian" value="little"/>
+    <property name="java.fullversion" value="17.0.8+5&#10;JRE 17 Mac OS X aarch64-64-Bit 20230718_343 (JIT enabled, AOT enabled)&#10;OpenJ9   - b9cd65edd&#10;OMR      - 0e572348b&#10;JCL      - 037408d4b91 based on jdk-17.0.8+5"/>
+    <property name="java.runtime.version" value="17.0.8+5"/>
+    <property name="user.name" value="hanjunhui"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="13.5"/>
+    <property name="java.runtime.name" value="IBM Semeru Runtime Open Edition"/>
+    <property name="ibm.signalhandling.sigint" value="true"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Eclipse OpenJ9 VM"/>
+    <property name="java.vendor.version" value="17.0.8.0-m1"/>
+    <property name="ibm.signalhandling.sigchain" value="true"/>
+    <property name="localRepository" value="/Users/hanjunhui/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/ibmruntimes/Semeru-Runtimes/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/f3/x_6r8wfs4k58871hg9xwj3t00000gn/T/"/>
+    <property name="java.version" value="17.0.8"/>
+    <property name="com.ibm.system.agent.path" value="/Users/hanjunhui/Library/Java/JavaVirtualMachines/semeru-17.0.8/Contents/Home/lib"/>
+    <property name="user.dir" value="/Users/hanjunhui/Downloads/demo"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="os.encoding" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/hanjunhui/Library/Java/JavaVirtualMachines/semeru-17.0.8/Contents/Home/lib/default:/Users/hanjunhui/Library/Java/JavaVirtualMachines/semeru-17.0.8/Contents/Home/lib:/usr/lib"/>
+    <property name="java.vm.info" value="JRE 17 Mac OS X aarch64-64-Bit 20230718_343 (JIT enabled, AOT enabled)&#10;OpenJ9   - b9cd65edd&#10;OMR      - 0e572348b&#10;JCL      - 037408d4b91 based on jdk-17.0.8+5"/>
+    <property name="java.vendor" value="IBM Corporation"/>
+    <property name="java.vm.version" value="v0.40.0-release-b9cd65edd"/>
+    <property name="ibm.system.encoding" value="UTF-8"/>
+    <property name="com.ibm.jcl.checkClassPath" value=""/>
+    <property name="java.lang.invoke.VarHandle.VAR_HANDLE_GUARDS" value="false"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="contextLoads" classname="com.example.vuebackend.VueBackendApplicationTests" time="0.155"/>
+</testsuite>
