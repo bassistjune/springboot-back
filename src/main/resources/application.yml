@@ -23,7 +23,6 @@ spring:
 
 spring.jpa.open-in-view: false
 #배포시 수정!!!
-#spring.jpa.hibernate.ddl-auto: create-drop
 spring.jpa.hibernate.ddl-auto: update
 #배포시 수정!!!
 spring.jpa.show-sql: true
