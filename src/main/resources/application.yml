@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 3000
 
 spring:
   web:
@@ -23,6 +23,7 @@ spring:
 
 spring.jpa.open-in-view: false
 #배포시 수정!!!
+#spring.jpa.hibernate.ddl-auto: create-drop
 spring.jpa.hibernate.ddl-auto: update
 #배포시 수정!!!
 spring.jpa.show-sql: true
@@ -41,6 +42,3 @@ file:
 spring.servlet.multipart.enabled: true
 spring.servlet.multipart.max-file-size: 10MB
 spring.servlet.multipart.max-request-size: 10MB
-logging:
-  level:
-    root: DEBUG

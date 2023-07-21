@@ -17,19 +17,12 @@ java {
 	sourceCompatibility = JavaVersion.VERSION_17
 	targetCompatibility = JavaVersion.VERSION_17
 }
-sourceSets {
-	test {
-		java {
-			srcDirs = ['src/test/java']
-		}
-	}
-}
+
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'com.h2database:h2'
 	implementation 'commons-fileupload:commons-fileupload:1.4'
@@ -43,6 +36,9 @@ dependencies {
 //springBoot {
 //	mainClass = 'com.example.vuebackend' // 실제 메인 클래스 패키지와 이름으로 변경해야 합니다.
 //}
+application {
+	mainClassName = 'com.example.vuebackend.VueBackendApplication'
+}
 tasks.named('test') {
 	useJUnitPlatform()
 }
