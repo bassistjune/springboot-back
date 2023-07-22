@@ -1,0 +1,9 @@
+name: board-back
+app: java@17
+options:
+  ports: 8082
+context:
+  git:
+    url: https://github.com/bassistjune/springboot-back.git
+    branch: master
+  preset: java-springboot
