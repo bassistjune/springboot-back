@@ -21,7 +21,7 @@ public class ImageController {
     public String uploadImage(@RequestParam("file") MultipartFile file) {
         try {
             // 파일 저장 경로 설정
-            String uploadFolderPath = "src/main/resources/upload/"; // resources 폴더 안의 upload 폴더 경로
+            String uploadFolderPath = "/upload/"; // resources 폴더 안의 upload 폴더 경로
 
             // 파일 이름 중복을 피하기 위해 UUID 사용
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
