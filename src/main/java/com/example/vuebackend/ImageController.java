@@ -24,7 +24,7 @@ public class ImageController {
             String uploadFolderPath = "src/main/resources/upload/"; // resources 폴더 안의 upload 폴더 경로
 
             // 파일 이름 중복을 피하기 위해 UUID 사용
-            String fileName = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
+            String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
             Path uploadPath = Paths.get(uploadFolderPath + fileName);
 
             Files.createDirectories(uploadPath.getParent());

@@ -6,7 +6,8 @@ spring:
     property-naming-strategy: SNAKE_CASE
   web:
     resources:
-      static-locations: "classpath:/resources/"
+      static-locations: classpath:/upload/, classpath:/static/, classpath:/public/
+
 spring.mvc.static-path-pattern: /static/**
 spring.jpa.open-in-view: false
 spring.jpa.hibernate.ddl-auto: create-drop

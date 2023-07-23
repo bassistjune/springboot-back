@@ -38,15 +38,15 @@ public class BoardService {
                     .contents(entity.getContents())
                     .author(entity.getAuthor())
                     .createdAt(entity.getCreatedAt().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")))
-                    .fileUrl("upload/" + entity.getFileUrl()) // 이미지 URL을 수정하여 설정
+                    .fileUrl(entity.getFileUrl())
                     .build();
 
             dtos.add(dto);
         }
 
+
         return dtos;
     }
-
 
     public BoardDto getBoard(Long id) {
         BoardEntity entity = boardRepository.findByIdWithFile(id)
@@ -67,23 +67,21 @@ public class BoardService {
                 .contents(entity.getContents())
                 .author(entity.getAuthor())
                 .createdAt(entity.getCreatedAt().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")))
-                .fileUrl("upload/" + entity.getFileUrl()) // 이미지 URL을 수정하여 설정
+                .fileUrl(entity.getFileUrl())
                 .build();
     }
 
     public BoardEntity create(BoardDto boardDto, MultipartFile file) throws IOException {
         if (file != null && !file.isEmpty()) {
-            String uploadDir = "upload";
+            String uploadDir = "classpath:/static/upload";
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
             Path filePath = Path.of(uploadDir, fileName);
 
-            // Create upload directory if it doesn't exist
-            Files.createDirectories(filePath.getParent());
 
-            // Save the file to the upload directory
+            Files.createDirectories(filePath.getParent());
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-            boardDto.setFileUrl(fileName);
+            boardDto.setFileUrl("/upload/" + fileName);
         } else {
             boardDto.setFileUrl(null); // 파일이 없는 경우에는 파일 URL을 null로 설정
         }
@@ -104,19 +102,18 @@ public class BoardService {
 
     public BoardEntity update(BoardDto boardDto, MultipartFile file) throws IOException {
         if (file != null && !file.isEmpty()) {
-            String uploadDir = "upload";
+            String uploadDir = "/upload";
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
             Path filePath = Path.of(uploadDir, fileName);
 
             // Create upload directory if it doesn't exist
-            Files.createDirectories(filePath.getParent());
 
-            // Save the file to the upload directory
+
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
-
+            Files.createDirectories(filePath.getParent());
             boardDto.setFileName(file.getOriginalFilename());
-            boardDto.setFileUrl(fileName);
-        } else {
+            boardDto.setFileUrl("/upload/" + fileName);
+        }  else {
             boardDto.setFileName(null); // 파일이 없는 경우에는 파일 이름과 URL을 null로 설정
             boardDto.setFileUrl(null);
         }
