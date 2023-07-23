@@ -12,7 +12,7 @@ import java.util.List;
 
 @Slf4j
 @RequiredArgsConstructor
-@CrossOrigin
+@CrossOrigin(origins="https://bassistjune.github.io/")
 @RestController
 public class BoardController {
     private final BoardService boardService;
