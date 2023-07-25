@@ -17,7 +17,7 @@ public class CorsConfiguration {
                 registry
                         .addMapping("/**")
                         .allowedOrigins("https://bassistjune.github.io")
-                // 이 설정은 https://sub.example.app 인 origin을 허용합니다.
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 ;
             }
         };
