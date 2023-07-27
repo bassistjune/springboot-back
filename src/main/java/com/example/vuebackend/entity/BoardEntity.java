@@ -31,12 +31,12 @@ public class BoardEntity {
     @OneToOne(mappedBy = "board", cascade = CascadeType.ALL)
     private FileEntity file;
 
-    // 추가: FileEntity 객체 반환하는 getFile() 메소드
+    // getFile() 메소드
     public FileEntity getFile() {
         return file;
     }
 
-    // 추가: FileEntity 객체 설정하는 setFile() 메소드
+    // setFile() 메소드
     public void setFile(FileEntity file) {
         this.file = file;
     }
