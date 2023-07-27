@@ -21,7 +21,7 @@ public class ImageController {
     public String uploadImage(@RequestParam("file") MultipartFile file) {
         try {
             // 파일 저장 경로 설정
-            String uploadFolderPath = "/upload/"; // resources 폴더 안의 upload 폴더 경로
+            String uploadFolderPath = "src/main/resources/static/upload/"; // resources 폴더 안의 upload 폴더 경로
 
             // 파일 이름 중복을 피하기 위해 UUID 사용
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
@@ -31,7 +31,7 @@ public class ImageController {
             Files.write(uploadPath, file.getBytes());
 
             // 이미지 URL 반환 (Vue.js에서 이미지를 불러올 때 사용할 URL)
-            return fileName;
+            return "/upload/" + fileName;
         } catch (IOException e) {
             e.printStackTrace();
             return "이미지 업로드에 실패했습니다.";

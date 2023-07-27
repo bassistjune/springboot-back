@@ -73,15 +73,14 @@ public class BoardService {
 
     public BoardEntity create(BoardDto boardDto, MultipartFile file) throws IOException {
         if (file != null && !file.isEmpty()) {
-            String uploadDir = "classpath:/static/upload";
+            String uploadDir = "src/main/resources/static/upload";
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
             Path filePath = Path.of(uploadDir, fileName);
-
 
             Files.createDirectories(filePath.getParent());
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-            boardDto.setFileUrl("/upload/" + fileName);
+            boardDto.setFileUrl(fileName);
         } else {
             boardDto.setFileUrl(null); // 파일이 없는 경우에는 파일 URL을 null로 설정
         }
@@ -102,17 +101,18 @@ public class BoardService {
 
     public BoardEntity update(BoardDto boardDto, MultipartFile file) throws IOException {
         if (file != null && !file.isEmpty()) {
-            String uploadDir = "/upload";
+            String uploadDir = "src/main/resources/static/upload";
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
             Path filePath = Path.of(uploadDir, fileName);
 
             // Create upload directory if it doesn't exist
 
 
-            Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
             Files.createDirectories(filePath.getParent());
+            Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+
             boardDto.setFileName(file.getOriginalFilename());
-            boardDto.setFileUrl("/upload/" + fileName);
+            boardDto.setFileUrl(fileName);
         }  else {
             boardDto.setFileName(null); // 파일이 없는 경우에는 파일 이름과 URL을 null로 설정
             boardDto.setFileUrl(null);
