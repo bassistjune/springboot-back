@@ -11,7 +11,7 @@ public class CorsConfiguration implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry
                 .addMapping("/**")
-                .allowedOrigins("http://localhost:8080/")
+                .allowedOrigins("bassistjune.github.io/vue-portfolio/")
 //                .allowedOrigins("https://bassistjune.github.io")
 //                .allowedMethods("*")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
